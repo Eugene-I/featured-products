@@ -293,5 +293,13 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+  
+          <!-- Start Live Server Reloading -->
+          <script>
+            var ws = new WebSocket('ws://localhost:57327');
+            ws.onmessage = function(evt) { location.reload(); }
+          </script>
+          <!-- End Live Server Reloading -->
+        </body>
+        
 </html>
