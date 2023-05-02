@@ -917,6 +917,88 @@
         "name": "Featured product"
       }
     },
+    "featured-products": {
+      "name": "Featured products",
+      "blocks": {
+        "product": {
+          "name": "Product",
+          "settings": {
+            "product": {
+              "label": "Select product"
+            },
+            "image_picker": {
+              "label": "Alternative image"
+            },
+            "image_fit": {
+              "label": "Image fit",
+              "options__1": {
+                "label": "Fill"
+              },
+              "options__2": {
+                "label": "Contain"
+              },
+              "options__3": {
+                "label": "Cover"
+              },
+              "options__4": {
+                "label": "None"
+              },
+              "options__5": {
+                "label": "Scale down"
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "title": {
+          "label": "Heading"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        },
+        "container_width": {
+          "label": "Container width"
+        },
+        "full_width": {
+          "label": "Make products full width"
+        },
+        "header": {
+          "content": "Product card"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "1:1"
+          },
+          "options__2": {
+            "label": "16:9"
+          },
+          "options__3": {
+            "label": "4:3"
+          },
+          "options__4": {
+            "label": "3:4"
+          }
+        },
+        "enable_quick_buy": {
+          "label": "Enable quick add button",
+          "info": "Optimal with popup or drawer cart type."
+        }
+      },
+      "presets": {
+        "name": "Featured products"
+      }
+    },
     "footer": {
       "name": "Footer",
       "blocks": {
