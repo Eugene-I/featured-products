@@ -1,35 +1,111 @@
-.card__heading a::after {
-  display: none;
+.featured-product-card {
+
+
+  autoplay-on-hover {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+
+    video {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
-.card_image-fit {
-  &--fill {
-    .media> :not(.zoom):not(.deferred-media__poster-button) {
-      object-fit: fill;
+.featured-product-card__media {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+
+  &:hover {
+    .card-image:not(:only-child) {
+      opacity: 0;
+    }
+
+    autoplay-on-hover {
+      opacity: 1;
     }
   }
 
-  &--contain {
-    .media> :not(.zoom):not(.deferred-media__poster-button) {
-      object-fit: contain;
+  &.image-fit {
+    &--fill {
+      .card-image>img {
+        object-fit: fill;
+      }
+    }
+
+    &--contain {
+      .card-image>img {
+        object-fit: contain;
+      }
+    }
+
+    &--cover {
+      .card-image>img {
+        object-fit: cover;
+      }
+    }
+
+    &--none {
+      .card-image>img {
+        object-fit: none;
+      }
+    }
+
+    &--scale-down {
+      .card-image>img {
+        object-fit: scale-down;
+      }
     }
   }
 
-  &--cover {
-    .media> :not(.zoom):not(.deferred-media__poster-button) {
-      object-fit: cover;
-    }
+  &:before {
+    content: '';
+    padding: 0 0 var(--ratio-percent);
   }
 
-  &--none {
-    .media> :not(.zoom):not(.deferred-media__poster-button) {
-      object-fit: none;
-    }
-  }
+  .card-image {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 
-  &--scale-down {
-    .media> :not(.zoom):not(.deferred-media__poster-button) {
-      object-fit: scale-down;
+    img {
+      height: 100%;
+      width: 100%;
     }
   }
+}
+
+.featured-product-card__content {
+  padding: 1rem 0;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.featured-product-card__heading {
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.featured-product-card__buttons {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  margin: 1rem 0 0;
 }

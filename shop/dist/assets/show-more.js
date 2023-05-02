@@ -19,4 +19,3 @@ class ShowMoreButton extends HTMLElement {
 }
 
 customElements.define('show-more-button', ShowMoreButton);
-
